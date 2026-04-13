@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecoveryPrediction",
+  "type": "object",
+  "required": ["recovery_action"],
+  "properties": {
+    "recovery_action": {
+      "type": "string",
+      "description": "One closed-set action string, e.g. Place(mug,sink)"
+    },
+    "failure_type": {
+      "type": "string",
+      "enum": ["F1", "F2", "F3", "F4", "F5"]
+    },
+    "evidence": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 240
+    }
+  },
+  "additionalProperties": false
+}

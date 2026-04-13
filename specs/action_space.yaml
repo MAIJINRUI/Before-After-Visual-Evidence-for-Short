@@ -1,0 +1,29 @@
+actions:
+  - name: LookAround
+    signature: "LookAround()"
+    args: []
+  - name: Navigate
+    signature: "Navigate(target)"
+    args: [target]
+  - name: Pick
+    signature: "Pick(obj)"
+    args: [obj]
+  - name: Place
+    signature: "Place(obj,loc)"
+    args: [obj, loc]
+  - name: Open
+    signature: "Open(container)"
+    args: [container]
+  - name: Close
+    signature: "Close(container)"
+    args: [container]
+  - name: Retry
+    signature: "Retry(action)"
+    args: [action]
+
+vocab:
+  objects: [mug, plate, spoon, apple, book]
+  targets: [table, sink, counter, cabinet, fridge]
+  locations: [table, sink, counter, cabinet]
+  containers: [cabinet, fridge]
+  retryable_actions: [Pick, Place, Open, Close, Navigate]
